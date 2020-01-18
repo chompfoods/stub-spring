@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information on a specific component of this food item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T16:42:42.583Z[GMT]")
 public class BrandedFoodObjectComponents   {
   @JsonProperty("name")
   private String name = null;

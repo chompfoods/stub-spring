@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T16:42:42.583Z[GMT]")
 public class BrandedFoodObjectCalorieConversionFactor   {
   @JsonProperty("protein_value")
   private BigDecimal proteinValue = null;
