@@ -27,7 +27,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T16:42:42.583Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T16:45:46.882Z[GMT]")
 public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
@@ -695,10 +695,10 @@ public class BrandedFoodObjectItems   {
   }
 
   /**
-   * An array of vitamins that this item contains
+   * An array of vitamins that can be found in this item
    * @return vitamins
   **/
-  @ApiModelProperty(value = "An array of vitamins that this item contains")
+  @ApiModelProperty(value = "An array of vitamins that can be found in this item")
   
     public List<String> getVitamins() {
     return vitamins;
