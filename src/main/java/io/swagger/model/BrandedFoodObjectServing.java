@@ -14,13 +14,10 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing serving information for this item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T12:50:39.942Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T12:55:44.047Z[GMT]")
 public class BrandedFoodObjectServing   {
   @JsonProperty("size")
-  private Integer size = null;
-
-  @JsonProperty("measurement_unit")
-  private String measurementUnit = null;
+  private String size = null;
 
   @JsonProperty("size_fulltext")
   private String sizeFulltext = null;
@@ -28,42 +25,23 @@ public class BrandedFoodObjectServing   {
   @JsonProperty("total")
   private Integer total = null;
 
-  public BrandedFoodObjectServing size(Integer size) {
+  public BrandedFoodObjectServing size(String size) {
     this.size = size;
     return this;
   }
 
   /**
-   * Serving size
+   * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
    * @return size
   **/
-  @ApiModelProperty(value = "Serving size")
+  @ApiModelProperty(value = "Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
   
-    public Integer getSize() {
+    public String getSize() {
     return size;
   }
 
-  public void setSize(Integer size) {
+  public void setSize(String size) {
     this.size = size;
-  }
-
-  public BrandedFoodObjectServing measurementUnit(String measurementUnit) {
-    this.measurementUnit = measurementUnit;
-    return this;
-  }
-
-  /**
-   * Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
-   * @return measurementUnit
-  **/
-  @ApiModelProperty(value = "Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
-  
-    public String getMeasurementUnit() {
-    return measurementUnit;
-  }
-
-  public void setMeasurementUnit(String measurementUnit) {
-    this.measurementUnit = measurementUnit;
   }
 
   public BrandedFoodObjectServing sizeFulltext(String sizeFulltext) {
@@ -115,14 +93,13 @@ public class BrandedFoodObjectServing   {
     }
     BrandedFoodObjectServing brandedFoodObjectServing = (BrandedFoodObjectServing) o;
     return Objects.equals(this.size, brandedFoodObjectServing.size) &&
-        Objects.equals(this.measurementUnit, brandedFoodObjectServing.measurementUnit) &&
         Objects.equals(this.sizeFulltext, brandedFoodObjectServing.sizeFulltext) &&
         Objects.equals(this.total, brandedFoodObjectServing.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(size, measurementUnit, sizeFulltext, total);
+    return Objects.hash(size, sizeFulltext, total);
   }
 
   @Override
@@ -131,7 +108,6 @@ public class BrandedFoodObjectServing   {
     sb.append("class BrandedFoodObjectServing {\n");
     
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
     sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
