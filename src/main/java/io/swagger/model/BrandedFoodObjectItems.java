@@ -10,6 +10,7 @@ import io.swagger.model.BrandedFoodObjectComponents;
 import io.swagger.model.BrandedFoodObjectCountryDetails;
 import io.swagger.model.BrandedFoodObjectDietFlags;
 import io.swagger.model.BrandedFoodObjectDietLabels;
+import io.swagger.model.BrandedFoodObjectIngredients;
 import io.swagger.model.BrandedFoodObjectNutrients;
 import io.swagger.model.BrandedFoodObjectPackage;
 import io.swagger.model.BrandedFoodObjectPackagingPhotos;
@@ -27,7 +28,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-21T23:19:12.618Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T12:50:39.942Z[GMT]")
 public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
@@ -39,7 +40,7 @@ public class BrandedFoodObjectItems   {
   private String brand = null;
 
   @JsonProperty("ingredients")
-  private String ingredients = null;
+  private BrandedFoodObjectIngredients ingredients = null;
 
   @JsonProperty("package")
   private BrandedFoodObjectPackage _package = null;
@@ -186,22 +187,23 @@ public class BrandedFoodObjectItems   {
     this.brand = brand;
   }
 
-  public BrandedFoodObjectItems ingredients(String ingredients) {
+  public BrandedFoodObjectItems ingredients(BrandedFoodObjectIngredients ingredients) {
     this.ingredients = ingredients;
     return this;
   }
 
   /**
-   * Ingredients in order of highest value to least
+   * Get ingredients
    * @return ingredients
   **/
-  @ApiModelProperty(value = "Ingredients in order of highest value to least")
+  @ApiModelProperty(value = "")
   
-    public String getIngredients() {
+    @Valid
+    public BrandedFoodObjectIngredients getIngredients() {
     return ingredients;
   }
 
-  public void setIngredients(String ingredients) {
+  public void setIngredients(BrandedFoodObjectIngredients ingredients) {
     this.ingredients = ingredients;
   }
 

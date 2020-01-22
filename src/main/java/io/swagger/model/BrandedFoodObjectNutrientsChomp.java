@@ -14,7 +14,7 @@ import javax.validation.constraints.*;
  * BrandedFoodObjectNutrientsChomp
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-21T23:19:12.618Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T12:50:39.942Z[GMT]")
 public class BrandedFoodObjectNutrientsChomp   {
   @JsonProperty("name")
   private String name = null;
