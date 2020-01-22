@@ -28,7 +28,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T13:02:22.290Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T13:41:42.080Z[GMT]")
 public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
@@ -117,8 +117,9 @@ public class BrandedFoodObjectItems   {
   @Valid
   private List<String> vitamins = null;
 
-  @JsonProperty("common_name")
-  private String commonName = null;
+  @JsonProperty("common_names")
+  @Valid
+  private List<String> commonNames = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -710,23 +711,31 @@ public class BrandedFoodObjectItems   {
     this.vitamins = vitamins;
   }
 
-  public BrandedFoodObjectItems commonName(String commonName) {
-    this.commonName = commonName;
+  public BrandedFoodObjectItems commonNames(List<String> commonNames) {
+    this.commonNames = commonNames;
+    return this;
+  }
+
+  public BrandedFoodObjectItems addCommonNamesItem(String commonNamesItem) {
+    if (this.commonNames == null) {
+      this.commonNames = new ArrayList<String>();
+    }
+    this.commonNames.add(commonNamesItem);
     return this;
   }
 
   /**
-   * Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
-   * @return commonName
+   * An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" a common name may be \"Chicken enchilada\")
+   * @return commonNames
   **/
-  @ApiModelProperty(value = "Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
+  @ApiModelProperty(value = "An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" a common name may be \"Chicken enchilada\")")
   
-    public String getCommonName() {
-    return commonName;
+    public List<String> getCommonNames() {
+    return commonNames;
   }
 
-  public void setCommonName(String commonName) {
-    this.commonName = commonName;
+  public void setCommonNames(List<String> commonNames) {
+    this.commonNames = commonNames;
   }
 
   public BrandedFoodObjectItems description(String description) {
@@ -829,7 +838,7 @@ public class BrandedFoodObjectItems   {
         Objects.equals(this.minerals, brandedFoodObjectItems.minerals) &&
         Objects.equals(this.traces, brandedFoodObjectItems.traces) &&
         Objects.equals(this.vitamins, brandedFoodObjectItems.vitamins) &&
-        Objects.equals(this.commonName, brandedFoodObjectItems.commonName) &&
+        Objects.equals(this.commonNames, brandedFoodObjectItems.commonNames) &&
         Objects.equals(this.description, brandedFoodObjectItems.description) &&
         Objects.equals(this.keywords, brandedFoodObjectItems.keywords) &&
         Objects.equals(this.footnote, brandedFoodObjectItems.footnote);
@@ -837,7 +846,7 @@ public class BrandedFoodObjectItems   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, commonName, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, commonNames, description, keywords, footnote);
   }
 
   @Override
@@ -870,7 +879,7 @@ public class BrandedFoodObjectItems   {
     sb.append("    minerals: ").append(toIndentedString(minerals)).append("\n");
     sb.append("    traces: ").append(toIndentedString(traces)).append("\n");
     sb.append("    vitamins: ").append(toIndentedString(vitamins)).append("\n");
-    sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
+    sb.append("    commonNames: ").append(toIndentedString(commonNames)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");

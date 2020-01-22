@@ -10,47 +10,25 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * An object containing basic packaging information about this item
+ * Serving information from as seen on ChompThis.com
  */
-@ApiModel(description = "An object containing basic packaging information about this item")
+@ApiModel(description = "Serving information from as seen on ChompThis.com")
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T13:41:42.080Z[GMT]")
-public class BrandedFoodObjectPackage   {
-  @JsonProperty("quantity")
-  private Integer quantity = null;
-
+public class BrandedFoodObjectServingChomp   {
   @JsonProperty("size")
   private String size = null;
 
-  public BrandedFoodObjectPackage quantity(Integer quantity) {
-    this.quantity = quantity;
-    return this;
-  }
-
-  /**
-   * Package quantity
-   * @return quantity
-  **/
-  @ApiModelProperty(value = "Package quantity")
-  
-    public Integer getQuantity() {
-    return quantity;
-  }
-
-  public void setQuantity(Integer quantity) {
-    this.quantity = quantity;
-  }
-
-  public BrandedFoodObjectPackage size(String size) {
+  public BrandedFoodObjectServingChomp size(String size) {
     this.size = size;
     return this;
   }
 
   /**
-   * Package size
+   * Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
    * @return size
   **/
-  @ApiModelProperty(value = "Package size")
+  @ApiModelProperty(value = "Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
   
     public String getSize() {
     return size;
@@ -69,22 +47,20 @@ public class BrandedFoodObjectPackage   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackage brandedFoodObjectPackage = (BrandedFoodObjectPackage) o;
-    return Objects.equals(this.quantity, brandedFoodObjectPackage.quantity) &&
-        Objects.equals(this.size, brandedFoodObjectPackage.size);
+    BrandedFoodObjectServingChomp brandedFoodObjectServingChomp = (BrandedFoodObjectServingChomp) o;
+    return Objects.equals(this.size, brandedFoodObjectServingChomp.size);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quantity, size);
+    return Objects.hash(size);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackage {\n");
+    sb.append("class BrandedFoodObjectServingChomp {\n");
     
-    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
     return sb.toString();

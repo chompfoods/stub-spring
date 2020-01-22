@@ -14,7 +14,7 @@ import javax.validation.constraints.*;
  * BrandedFoodObjectNutrientsUsda
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T13:02:22.290Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T13:41:42.080Z[GMT]")
 public class BrandedFoodObjectNutrientsUsda   {
   @JsonProperty("id")
   private Integer id = null;
