@@ -14,7 +14,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing this item's ingredients in order of highest value to least")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T13:41:42.080Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T14:07:34.072Z[GMT]")
 public class BrandedFoodObjectIngredients   {
   @JsonProperty("chomp")
   private String chomp = null;
@@ -28,10 +28,10 @@ public class BrandedFoodObjectIngredients   {
   }
 
   /**
-   * This item's ingredients as seen on ChompThis.com
+   * Ingredients for this item from Chomp's internal database
    * @return chomp
   **/
-  @ApiModelProperty(value = "This item's ingredients as seen on ChompThis.com")
+  @ApiModelProperty(value = "Ingredients for this item from Chomp's internal database")
   
     public String getChomp() {
     return chomp;

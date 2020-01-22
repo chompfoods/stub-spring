@@ -10,11 +10,11 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * Serving information from as seen on ChompThis.com
+ * Serving information from Chomp&#x27;s internal database
  */
-@ApiModel(description = "Serving information from as seen on ChompThis.com")
+@ApiModel(description = "Serving information from Chomp's internal database")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T13:41:42.080Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T14:07:34.072Z[GMT]")
 public class BrandedFoodObjectServingChomp   {
   @JsonProperty("size")
   private String size = null;
