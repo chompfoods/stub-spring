@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.BrandedFoodObjectCalorieConversionFactor;
 import io.swagger.model.BrandedFoodObjectDietLabels;
+import io.swagger.model.IngredientObjectCalorieConversionFactor;
 import io.swagger.model.IngredientObjectComponents;
 import io.swagger.model.IngredientObjectNutrients;
 import io.swagger.model.IngredientObjectPortions;
@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:13:51.429Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:15:58.487Z[GMT]")
 public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
@@ -35,7 +35,7 @@ public class IngredientObjectItems   {
   private IngredientObjectNutrients nutrients = null;
 
   @JsonProperty("calorie_conversion_factor")
-  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;
+  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;
 
   @JsonProperty("protein_conversion_factor")
   private BigDecimal proteinConversionFactor = null;
@@ -126,7 +126,7 @@ public class IngredientObjectItems   {
     this.nutrients = nutrients;
   }
 
-  public IngredientObjectItems calorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public IngredientObjectItems calorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
     return this;
   }
@@ -138,11 +138,11 @@ public class IngredientObjectItems   {
   @ApiModelProperty(value = "")
   
     @Valid
-    public BrandedFoodObjectCalorieConversionFactor getCalorieConversionFactor() {
+    public IngredientObjectCalorieConversionFactor getCalorieConversionFactor() {
     return calorieConversionFactor;
   }
 
-  public void setCalorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public void setCalorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
   }
 
