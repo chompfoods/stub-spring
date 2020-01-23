@@ -6,10 +6,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.model.BrandedFoodObjectComponents;
 import io.swagger.model.BrandedFoodObjectDietLabels;
-import io.swagger.model.BrandedFoodObjectPortions;
+import io.swagger.model.IngredientObjectComponents;
 import io.swagger.model.IngredientObjectNutrients;
+import io.swagger.model.IngredientObjectPortions;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:07:59.789Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:12:53.188Z[GMT]")
 public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
@@ -45,11 +45,11 @@ public class IngredientObjectItems   {
 
   @JsonProperty("components")
   @Valid
-  private List<BrandedFoodObjectComponents> components = null;
+  private List<IngredientObjectComponents> components = null;
 
   @JsonProperty("portions")
   @Valid
-  private List<BrandedFoodObjectPortions> portions = null;
+  private List<IngredientObjectPortions> portions = null;
 
   @JsonProperty("common_names")
   private String commonNames = null;
@@ -186,14 +186,14 @@ public class IngredientObjectItems   {
     this.dietLabels = dietLabels;
   }
 
-  public IngredientObjectItems components(List<BrandedFoodObjectComponents> components) {
+  public IngredientObjectItems components(List<IngredientObjectComponents> components) {
     this.components = components;
     return this;
   }
 
-  public IngredientObjectItems addComponentsItem(BrandedFoodObjectComponents componentsItem) {
+  public IngredientObjectItems addComponentsItem(IngredientObjectComponents componentsItem) {
     if (this.components == null) {
-      this.components = new ArrayList<BrandedFoodObjectComponents>();
+      this.components = new ArrayList<IngredientObjectComponents>();
     }
     this.components.add(componentsItem);
     return this;
@@ -205,22 +205,22 @@ public class IngredientObjectItems   {
   **/
   @ApiModelProperty(value = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
       @Valid
-    public List<BrandedFoodObjectComponents> getComponents() {
+    public List<IngredientObjectComponents> getComponents() {
     return components;
   }
 
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
+  public void setComponents(List<IngredientObjectComponents> components) {
     this.components = components;
   }
 
-  public IngredientObjectItems portions(List<BrandedFoodObjectPortions> portions) {
+  public IngredientObjectItems portions(List<IngredientObjectPortions> portions) {
     this.portions = portions;
     return this;
   }
 
-  public IngredientObjectItems addPortionsItem(BrandedFoodObjectPortions portionsItem) {
+  public IngredientObjectItems addPortionsItem(IngredientObjectPortions portionsItem) {
     if (this.portions == null) {
-      this.portions = new ArrayList<BrandedFoodObjectPortions>();
+      this.portions = new ArrayList<IngredientObjectPortions>();
     }
     this.portions.add(portionsItem);
     return this;
@@ -232,11 +232,11 @@ public class IngredientObjectItems   {
   **/
   @ApiModelProperty(value = "An array of objects containing information on discrete amounts of a food found in this item")
       @Valid
-    public List<BrandedFoodObjectPortions> getPortions() {
+    public List<IngredientObjectPortions> getPortions() {
     return portions;
   }
 
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
+  public void setPortions(List<IngredientObjectPortions> portions) {
     this.portions = portions;
   }
 
