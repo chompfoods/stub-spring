@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:15:58.487Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:57:41.630Z[GMT]")
 public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
@@ -32,7 +32,8 @@ public class IngredientObjectItems   {
   private List<String> categories = null;
 
   @JsonProperty("nutrients")
-  private IngredientObjectNutrients nutrients = null;
+  @Valid
+  private List<IngredientObjectNutrients> nutrients = null;
 
   @JsonProperty("calorie_conversion_factor")
   private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;
@@ -106,23 +107,30 @@ public class IngredientObjectItems   {
     this.categories = categories;
   }
 
-  public IngredientObjectItems nutrients(IngredientObjectNutrients nutrients) {
+  public IngredientObjectItems nutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public IngredientObjectItems addNutrientsItem(IngredientObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<IngredientObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
   /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
   **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public IngredientObjectNutrients getNutrients() {
+  @ApiModelProperty(value = "An array containing nutrient informatio objects for this food item")
+      @Valid
+    public List<IngredientObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(IngredientObjectNutrients nutrients) {
+  public void setNutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 

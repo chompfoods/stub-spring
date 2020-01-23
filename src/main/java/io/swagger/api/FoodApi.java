@@ -24,7 +24,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:15:58.487Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:57:41.630Z[GMT]")
 @Api(value = "food", description = "the food API")
 public interface FoodApi {
 
@@ -41,21 +41,6 @@ public interface FoodApi {
         produces = { "application/json" }, 
         method = RequestMethod.GET)
     ResponseEntity<BrandedFoodObject> foodBrandedBarcodePhpGet(@NotNull @ApiParam(value = "#### UPC/EAN barcode  **Example** > ```&code=0842234000988``` ", required = true) @Valid @RequestParam(value = "code", required = true) String code);
-
-
-    @ApiOperation(value = "Get a branded food item using an ID number", nickname = "foodBrandedIdPhpGet", notes = "## Get data for a branded food using Chomp's internal ID number.  **Example** > ```https://chompthis.com/api/v2/food/branded/id.php?api_key=API_KEY&id=ID```  **Tips**   * Find a food's ID by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.   * Alternatively, set the \"source\" parameter to \"USDA\" and use the food's FDC ID. ", response = BrandedFoodObject.class, authorizations = {
-        @Authorization(value = "ApiKeyAuth")    }, tags={  })
-    @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "**Valid** - Will return an object containing any matching foods.  ", response = BrandedFoodObject.class),
-        @ApiResponse(code = 400, message = "**Validation error** - Invalid parameters or request. "),
-        @ApiResponse(code = 401, message = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
-        @ApiResponse(code = 403, message = "**Forbidden** - Disallowed entity. "),
-        @ApiResponse(code = 404, message = "**Not found** - No food items exist that match your query parameters. "),
-        @ApiResponse(code = 500, message = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
-    @RequestMapping(value = "/food/branded/id.php",
-        produces = { "application/json" }, 
-        method = RequestMethod.GET)
-    ResponseEntity<BrandedFoodObject> foodBrandedIdPhpGet(@NotNull @ApiParam(value = "#### The ID number of a branded food item.  **Example #1: Using Chomp ID** > ```&id=15```  **Example #2: Using FDC ID** > ```&id=FDC_ID&source=USDA``` ", required = true) @Valid @RequestParam(value = "id", required = true) Integer id,@ApiParam(value = "#### Configure the endpoint to accept food IDs from various data sources. This endpoint defaults to Chomp but can accept FDC IDs.  **Example** > ```&source=Chomp```  **Tips**   * Pass in ```&source=USDA``` if you want to look up food items using a USDA FDC ID. ", allowableValues = "Chomp, USDA") @Valid @RequestParam(value = "source", required = false) String source);
 
 
     @ApiOperation(value = "Get a branded food item by name", nickname = "foodBrandedNamePhpGet", notes = "## Search for branded food items by name.  **Example** > ```https://chompthis.com/api/v2/food/branded/name.php?api_key=API_KEY&name=NAME```  **Tips**   * Get started by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription. ", response = BrandedFoodObject.class, authorizations = {

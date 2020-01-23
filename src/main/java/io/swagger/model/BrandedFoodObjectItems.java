@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.BrandedFoodObjectCountryDetails;
 import io.swagger.model.BrandedFoodObjectDietFlags;
 import io.swagger.model.BrandedFoodObjectDietLabels;
-import io.swagger.model.BrandedFoodObjectIngredients;
 import io.swagger.model.BrandedFoodObjectNutrients;
 import io.swagger.model.BrandedFoodObjectPackage;
 import io.swagger.model.BrandedFoodObjectPackagingPhotos;
@@ -24,7 +23,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:15:58.487Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-23T13:57:41.630Z[GMT]")
 public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
@@ -36,7 +35,7 @@ public class BrandedFoodObjectItems   {
   private String brand = null;
 
   @JsonProperty("ingredients")
-  private BrandedFoodObjectIngredients ingredients = null;
+  private String ingredients = null;
 
   @JsonProperty("package")
   private BrandedFoodObjectPackage _package = null;
@@ -49,7 +48,8 @@ public class BrandedFoodObjectItems   {
   private List<String> categories = null;
 
   @JsonProperty("nutrients")
-  private BrandedFoodObjectNutrients nutrients = null;
+  @Valid
+  private List<BrandedFoodObjectNutrients> nutrients = null;
 
   @JsonProperty("diet_labels")
   private BrandedFoodObjectDietLabels dietLabels = null;
@@ -163,23 +163,22 @@ public class BrandedFoodObjectItems   {
     this.brand = brand;
   }
 
-  public BrandedFoodObjectItems ingredients(BrandedFoodObjectIngredients ingredients) {
+  public BrandedFoodObjectItems ingredients(String ingredients) {
     this.ingredients = ingredients;
     return this;
   }
 
   /**
-   * Get ingredients
+   * This food item's ingredients from greatest quantity to least
    * @return ingredients
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "This food item's ingredients from greatest quantity to least")
   
-    @Valid
-    public BrandedFoodObjectIngredients getIngredients() {
+    public String getIngredients() {
     return ingredients;
   }
 
-  public void setIngredients(BrandedFoodObjectIngredients ingredients) {
+  public void setIngredients(String ingredients) {
     this.ingredients = ingredients;
   }
 
@@ -250,23 +249,30 @@ public class BrandedFoodObjectItems   {
     this.categories = categories;
   }
 
-  public BrandedFoodObjectItems nutrients(BrandedFoodObjectNutrients nutrients) {
+  public BrandedFoodObjectItems nutrients(List<BrandedFoodObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public BrandedFoodObjectItems addNutrientsItem(BrandedFoodObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<BrandedFoodObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
   /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
   **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public BrandedFoodObjectNutrients getNutrients() {
+  @ApiModelProperty(value = "An array containing nutrient informatio objects for this food item")
+      @Valid
+    public List<BrandedFoodObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(BrandedFoodObjectNutrients nutrients) {
+  public void setNutrients(List<BrandedFoodObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 
