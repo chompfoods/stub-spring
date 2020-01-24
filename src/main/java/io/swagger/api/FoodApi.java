@@ -24,7 +24,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-24T13:21:53.301Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-24T13:22:21.983Z[GMT]")
 @Api(value = "food", description = "the food API")
 public interface FoodApi {
 
@@ -34,7 +34,6 @@ public interface FoodApi {
         @ApiResponse(code = 200, message = "**Valid** - Will return an object containing any matching foods.  ", response = BrandedFoodObject.class),
         @ApiResponse(code = 400, message = "**Validation error** - Invalid parameters or request. "),
         @ApiResponse(code = 401, message = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
-        @ApiResponse(code = 403, message = ""),
         @ApiResponse(code = 404, message = "**Not found** - No food items were found. "),
         @ApiResponse(code = 500, message = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     @RequestMapping(value = "/food/branded/barcode.php",
@@ -49,7 +48,6 @@ public interface FoodApi {
         @ApiResponse(code = 200, message = "**Valid** - Will return an object containing any matching foods.  ", response = BrandedFoodObject.class),
         @ApiResponse(code = 400, message = "**Validation error** - Invalid parameters or request. "),
         @ApiResponse(code = 401, message = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
-        @ApiResponse(code = 403, message = ""),
         @ApiResponse(code = 404, message = "**Not found** - No food items were found. "),
         @ApiResponse(code = 500, message = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     @RequestMapping(value = "/food/branded/name.php",
@@ -64,7 +62,6 @@ public interface FoodApi {
         @ApiResponse(code = 200, message = "**Valid** - Will return an object containing any matching foods.  ", response = BrandedFoodObject.class),
         @ApiResponse(code = 400, message = "**Validation error** - Invalid parameters or request. "),
         @ApiResponse(code = 401, message = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
-        @ApiResponse(code = 403, message = ""),
         @ApiResponse(code = 404, message = "**Not found** - No food items were found. "),
         @ApiResponse(code = 500, message = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     @RequestMapping(value = "/food/branded/search.php",
@@ -79,7 +76,6 @@ public interface FoodApi {
         @ApiResponse(code = 200, message = "**Valid** - Will return an object containing any matching ingredient foods.  ", response = IngredientObject.class),
         @ApiResponse(code = 400, message = "**Validation error** - Invalid parameters or request. "),
         @ApiResponse(code = 401, message = "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "),
-        @ApiResponse(code = 403, message = ""),
         @ApiResponse(code = 404, message = "**Not found** - No food items were found. "),
         @ApiResponse(code = 500, message = "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* ") })
     @RequestMapping(value = "/food/ingredient/search.php",
