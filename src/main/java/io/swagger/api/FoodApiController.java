@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-27T21:16:23.017Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-27T21:18:02.330Z[GMT]")
 @Controller
 public class FoodApiController implements FoodApi {
 
@@ -80,7 +80,7 @@ public class FoodApiController implements FoodApi {
         return new ResponseEntity<BrandedFoodObject>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<IngredientObject> foodIngredientSearchPhpGet(@NotNull @ApiParam(value = "Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. ", required = true) @Valid @RequestParam(value = "find", required = true) Integer find,@ApiParam(value = "#### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` ") @Valid @RequestParam(value = "raw", required = false) Boolean raw,@ApiParam(value = "#### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` ", allowableValues = "1, 2, 3") @Valid @RequestParam(value = "limit", required = false) Integer limit) {
+    public ResponseEntity<IngredientObject> foodIngredientSearchPhpGet(@NotNull @ApiParam(value = "Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. ", required = true) @Valid @RequestParam(value = "find", required = true) String find,@ApiParam(value = "#### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` ") @Valid @RequestParam(value = "raw", required = false) Boolean raw,@ApiParam(value = "#### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` ", allowableValues = "1, 2, 3") @Valid @RequestParam(value = "limit", required = false) Integer limit) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
