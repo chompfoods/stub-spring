@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.BrandedFoodObjectDietLabels;
 import io.swagger.model.IngredientObjectCalorieConversionFactor;
 import io.swagger.model.IngredientObjectComponents;
 import io.swagger.model.IngredientObjectNutrients;
@@ -22,7 +21,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-28T13:14:16.027Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-28T13:53:56.575Z[GMT]")
 public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
@@ -41,9 +40,6 @@ public class IngredientObjectItems   {
   @JsonProperty("protein_conversion_factor")
   private BigDecimal proteinConversionFactor = null;
 
-  @JsonProperty("diet_labels")
-  private BrandedFoodObjectDietLabels dietLabels = null;
-
   @JsonProperty("components")
   @Valid
   private List<IngredientObjectComponents> components = null;
@@ -54,9 +50,6 @@ public class IngredientObjectItems   {
 
   @JsonProperty("common_name")
   private String commonName = null;
-
-  @JsonProperty("description")
-  private String description = null;
 
   @JsonProperty("footnote")
   private String footnote = null;
@@ -174,26 +167,6 @@ public class IngredientObjectItems   {
     this.proteinConversionFactor = proteinConversionFactor;
   }
 
-  public IngredientObjectItems dietLabels(BrandedFoodObjectDietLabels dietLabels) {
-    this.dietLabels = dietLabels;
-    return this;
-  }
-
-  /**
-   * Get dietLabels
-   * @return dietLabels
-  **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public BrandedFoodObjectDietLabels getDietLabels() {
-    return dietLabels;
-  }
-
-  public void setDietLabels(BrandedFoodObjectDietLabels dietLabels) {
-    this.dietLabels = dietLabels;
-  }
-
   public IngredientObjectItems components(List<IngredientObjectComponents> components) {
     this.components = components;
     return this;
@@ -267,25 +240,6 @@ public class IngredientObjectItems   {
     this.commonName = commonName;
   }
 
-  public IngredientObjectItems description(String description) {
-    this.description = description;
-    return this;
-  }
-
-  /**
-   * A description of this item
-   * @return description
-  **/
-  @ApiModelProperty(value = "A description of this item")
-  
-    public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
   public IngredientObjectItems footnote(String footnote) {
     this.footnote = footnote;
     return this;
@@ -320,17 +274,15 @@ public class IngredientObjectItems   {
         Objects.equals(this.nutrients, ingredientObjectItems.nutrients) &&
         Objects.equals(this.calorieConversionFactor, ingredientObjectItems.calorieConversionFactor) &&
         Objects.equals(this.proteinConversionFactor, ingredientObjectItems.proteinConversionFactor) &&
-        Objects.equals(this.dietLabels, ingredientObjectItems.dietLabels) &&
         Objects.equals(this.components, ingredientObjectItems.components) &&
         Objects.equals(this.portions, ingredientObjectItems.portions) &&
         Objects.equals(this.commonName, ingredientObjectItems.commonName) &&
-        Objects.equals(this.description, ingredientObjectItems.description) &&
         Objects.equals(this.footnote, ingredientObjectItems.footnote);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, components, portions, commonName, description, footnote);
+    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, components, portions, commonName, footnote);
   }
 
   @Override
@@ -343,11 +295,9 @@ public class IngredientObjectItems   {
     sb.append("    nutrients: ").append(toIndentedString(nutrients)).append("\n");
     sb.append("    calorieConversionFactor: ").append(toIndentedString(calorieConversionFactor)).append("\n");
     sb.append("    proteinConversionFactor: ").append(toIndentedString(proteinConversionFactor)).append("\n");
-    sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    components: ").append(toIndentedString(components)).append("\n");
     sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
     sb.append("}");
     return sb.toString();
