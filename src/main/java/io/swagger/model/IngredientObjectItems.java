@@ -21,7 +21,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-28T14:07:08.394Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-28T14:08:55.924Z[GMT]")
 public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
@@ -252,10 +252,10 @@ public class IngredientObjectItems   {
   }
 
   /**
-   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
    * @return footnote
   **/
-  @ApiModelProperty(value = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.")
+  @ApiModelProperty(value = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall")
   
     public String getFootnote() {
     return footnote;
@@ -271,10 +271,10 @@ public class IngredientObjectItems   {
   }
 
   /**
-   * The original search term that found this food item.
+   * The original search term that found this food item
    * @return searchTerm
   **/
-  @ApiModelProperty(value = "The original search term that found this food item.")
+  @ApiModelProperty(value = "The original search term that found this food item")
   
     public String getSearchTerm() {
     return searchTerm;
@@ -290,10 +290,10 @@ public class IngredientObjectItems   {
   }
 
   /**
-   * A value that represents how similar the name of this food item is to the original search term.
+   * A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.
    * @return score
   **/
-  @ApiModelProperty(value = "A value that represents how similar the name of this food item is to the original search term.")
+  @ApiModelProperty(value = "A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.")
   
     public String getScore() {
     return score;
