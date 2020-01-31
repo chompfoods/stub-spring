@@ -15,8 +15,8 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information on a specific food portion found in this item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
-public class BrandedFoodObjectPortions   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+public class IngredientObjectPortions   {
   @JsonProperty("measurement_unit")
   private String measurementUnit = null;
 
@@ -35,7 +35,7 @@ public class BrandedFoodObjectPortions   {
   @JsonProperty("footnote")
   private String footnote = null;
 
-  public BrandedFoodObjectPortions measurementUnit(String measurementUnit) {
+  public IngredientObjectPortions measurementUnit(String measurementUnit) {
     this.measurementUnit = measurementUnit;
     return this;
   }
@@ -54,7 +54,7 @@ public class BrandedFoodObjectPortions   {
     this.measurementUnit = measurementUnit;
   }
 
-  public BrandedFoodObjectPortions description(String description) {
+  public IngredientObjectPortions description(String description) {
     this.description = description;
     return this;
   }
@@ -73,7 +73,7 @@ public class BrandedFoodObjectPortions   {
     this.description = description;
   }
 
-  public BrandedFoodObjectPortions modifier(String modifier) {
+  public IngredientObjectPortions modifier(String modifier) {
     this.modifier = modifier;
     return this;
   }
@@ -92,7 +92,7 @@ public class BrandedFoodObjectPortions   {
     this.modifier = modifier;
   }
 
-  public BrandedFoodObjectPortions gramWeight(BigDecimal gramWeight) {
+  public IngredientObjectPortions gramWeight(BigDecimal gramWeight) {
     this.gramWeight = gramWeight;
     return this;
   }
@@ -112,7 +112,7 @@ public class BrandedFoodObjectPortions   {
     this.gramWeight = gramWeight;
   }
 
-  public BrandedFoodObjectPortions dataPoints(Integer dataPoints) {
+  public IngredientObjectPortions dataPoints(Integer dataPoints) {
     this.dataPoints = dataPoints;
     return this;
   }
@@ -131,7 +131,7 @@ public class BrandedFoodObjectPortions   {
     this.dataPoints = dataPoints;
   }
 
-  public BrandedFoodObjectPortions footnote(String footnote) {
+  public IngredientObjectPortions footnote(String footnote) {
     this.footnote = footnote;
     return this;
   }
@@ -159,13 +159,13 @@ public class BrandedFoodObjectPortions   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPortions brandedFoodObjectPortions = (BrandedFoodObjectPortions) o;
-    return Objects.equals(this.measurementUnit, brandedFoodObjectPortions.measurementUnit) &&
-        Objects.equals(this.description, brandedFoodObjectPortions.description) &&
-        Objects.equals(this.modifier, brandedFoodObjectPortions.modifier) &&
-        Objects.equals(this.gramWeight, brandedFoodObjectPortions.gramWeight) &&
-        Objects.equals(this.dataPoints, brandedFoodObjectPortions.dataPoints) &&
-        Objects.equals(this.footnote, brandedFoodObjectPortions.footnote);
+    IngredientObjectPortions ingredientObjectPortions = (IngredientObjectPortions) o;
+    return Objects.equals(this.measurementUnit, ingredientObjectPortions.measurementUnit) &&
+        Objects.equals(this.description, ingredientObjectPortions.description) &&
+        Objects.equals(this.modifier, ingredientObjectPortions.modifier) &&
+        Objects.equals(this.gramWeight, ingredientObjectPortions.gramWeight) &&
+        Objects.equals(this.dataPoints, ingredientObjectPortions.dataPoints) &&
+        Objects.equals(this.footnote, ingredientObjectPortions.footnote);
   }
 
   @Override
@@ -176,7 +176,7 @@ public class BrandedFoodObjectPortions   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPortions {\n");
+    sb.append("class IngredientObjectPortions {\n");
     
     sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

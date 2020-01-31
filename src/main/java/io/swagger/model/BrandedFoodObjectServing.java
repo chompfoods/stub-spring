@@ -14,10 +14,10 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing serving information for this item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
 public class BrandedFoodObjectServing   {
   @JsonProperty("size")
-  private Integer size = null;
+  private String size = null;
 
   @JsonProperty("measurement_unit")
   private String measurementUnit = null;
@@ -25,10 +25,7 @@ public class BrandedFoodObjectServing   {
   @JsonProperty("size_fulltext")
   private String sizeFulltext = null;
 
-  @JsonProperty("total")
-  private Integer total = null;
-
-  public BrandedFoodObjectServing size(Integer size) {
+  public BrandedFoodObjectServing size(String size) {
     this.size = size;
     return this;
   }
@@ -39,11 +36,11 @@ public class BrandedFoodObjectServing   {
   **/
   @ApiModelProperty(value = "Serving size")
   
-    public Integer getSize() {
+    public String getSize() {
     return size;
   }
 
-  public void setSize(Integer size) {
+  public void setSize(String size) {
     this.size = size;
   }
 
@@ -53,10 +50,10 @@ public class BrandedFoodObjectServing   {
   }
 
   /**
-   * Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
+   * Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
    * @return measurementUnit
   **/
-  @ApiModelProperty(value = "Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)")
+  @ApiModelProperty(value = "Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)")
   
     public String getMeasurementUnit() {
     return measurementUnit;
@@ -85,25 +82,6 @@ public class BrandedFoodObjectServing   {
     this.sizeFulltext = sizeFulltext;
   }
 
-  public BrandedFoodObjectServing total(Integer total) {
-    this.total = total;
-    return this;
-  }
-
-  /**
-   * Total servings
-   * @return total
-  **/
-  @ApiModelProperty(value = "Total servings")
-  
-    public Integer getTotal() {
-    return total;
-  }
-
-  public void setTotal(Integer total) {
-    this.total = total;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -116,13 +94,12 @@ public class BrandedFoodObjectServing   {
     BrandedFoodObjectServing brandedFoodObjectServing = (BrandedFoodObjectServing) o;
     return Objects.equals(this.size, brandedFoodObjectServing.size) &&
         Objects.equals(this.measurementUnit, brandedFoodObjectServing.measurementUnit) &&
-        Objects.equals(this.sizeFulltext, brandedFoodObjectServing.sizeFulltext) &&
-        Objects.equals(this.total, brandedFoodObjectServing.total);
+        Objects.equals(this.sizeFulltext, brandedFoodObjectServing.sizeFulltext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(size, measurementUnit, sizeFulltext, total);
+    return Objects.hash(size, measurementUnit, sizeFulltext);
   }
 
   @Override
@@ -133,7 +110,6 @@ public class BrandedFoodObjectServing   {
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
     sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
-    sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
     return sb.toString();
   }

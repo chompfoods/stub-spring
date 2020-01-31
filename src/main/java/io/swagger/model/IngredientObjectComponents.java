@@ -15,8 +15,8 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information on a specific component of this food item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
-public class BrandedFoodObjectComponents   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+public class IngredientObjectComponents   {
   @JsonProperty("name")
   private String name = null;
 
@@ -32,7 +32,7 @@ public class BrandedFoodObjectComponents   {
   @JsonProperty("data_points")
   private Integer dataPoints = null;
 
-  public BrandedFoodObjectComponents name(String name) {
+  public IngredientObjectComponents name(String name) {
     this.name = name;
     return this;
   }
@@ -51,7 +51,7 @@ public class BrandedFoodObjectComponents   {
     this.name = name;
   }
 
-  public BrandedFoodObjectComponents pctWeight(BigDecimal pctWeight) {
+  public IngredientObjectComponents pctWeight(BigDecimal pctWeight) {
     this.pctWeight = pctWeight;
     return this;
   }
@@ -71,7 +71,7 @@ public class BrandedFoodObjectComponents   {
     this.pctWeight = pctWeight;
   }
 
-  public BrandedFoodObjectComponents gramWeight(BigDecimal gramWeight) {
+  public IngredientObjectComponents gramWeight(BigDecimal gramWeight) {
     this.gramWeight = gramWeight;
     return this;
   }
@@ -91,7 +91,7 @@ public class BrandedFoodObjectComponents   {
     this.gramWeight = gramWeight;
   }
 
-  public BrandedFoodObjectComponents isRefuse(Boolean isRefuse) {
+  public IngredientObjectComponents isRefuse(Boolean isRefuse) {
     this.isRefuse = isRefuse;
     return this;
   }
@@ -110,7 +110,7 @@ public class BrandedFoodObjectComponents   {
     this.isRefuse = isRefuse;
   }
 
-  public BrandedFoodObjectComponents dataPoints(Integer dataPoints) {
+  public IngredientObjectComponents dataPoints(Integer dataPoints) {
     this.dataPoints = dataPoints;
     return this;
   }
@@ -138,12 +138,12 @@ public class BrandedFoodObjectComponents   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectComponents brandedFoodObjectComponents = (BrandedFoodObjectComponents) o;
-    return Objects.equals(this.name, brandedFoodObjectComponents.name) &&
-        Objects.equals(this.pctWeight, brandedFoodObjectComponents.pctWeight) &&
-        Objects.equals(this.gramWeight, brandedFoodObjectComponents.gramWeight) &&
-        Objects.equals(this.isRefuse, brandedFoodObjectComponents.isRefuse) &&
-        Objects.equals(this.dataPoints, brandedFoodObjectComponents.dataPoints);
+    IngredientObjectComponents ingredientObjectComponents = (IngredientObjectComponents) o;
+    return Objects.equals(this.name, ingredientObjectComponents.name) &&
+        Objects.equals(this.pctWeight, ingredientObjectComponents.pctWeight) &&
+        Objects.equals(this.gramWeight, ingredientObjectComponents.gramWeight) &&
+        Objects.equals(this.isRefuse, ingredientObjectComponents.isRefuse) &&
+        Objects.equals(this.dataPoints, ingredientObjectComponents.dataPoints);
   }
 
   @Override
@@ -154,7 +154,7 @@ public class BrandedFoodObjectComponents   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectComponents {\n");
+    sb.append("class IngredientObjectComponents {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    pctWeight: ").append(toIndentedString(pctWeight)).append("\n");

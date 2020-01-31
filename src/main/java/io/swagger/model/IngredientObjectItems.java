@@ -5,11 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.model.BrandedFoodObjectComponents;
-import io.swagger.model.BrandedFoodObjectDietLabels;
-import io.swagger.model.BrandedFoodObjectPortions;
+import io.swagger.model.IngredientObjectCalorieConversionFactor;
+import io.swagger.model.IngredientObjectComponents;
 import io.swagger.model.IngredientObjectNutrients;
+import io.swagger.model.IngredientObjectPortions;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +21,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
 public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
@@ -32,33 +31,34 @@ public class IngredientObjectItems   {
   private List<String> categories = null;
 
   @JsonProperty("nutrients")
-  private IngredientObjectNutrients nutrients = null;
+  @Valid
+  private List<IngredientObjectNutrients> nutrients = null;
 
   @JsonProperty("calorie_conversion_factor")
-  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;
+  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;
 
   @JsonProperty("protein_conversion_factor")
   private BigDecimal proteinConversionFactor = null;
 
-  @JsonProperty("diet_labels")
-  private BrandedFoodObjectDietLabels dietLabels = null;
-
   @JsonProperty("components")
   @Valid
-  private List<BrandedFoodObjectComponents> components = null;
+  private List<IngredientObjectComponents> components = null;
 
   @JsonProperty("portions")
   @Valid
-  private List<BrandedFoodObjectPortions> portions = null;
+  private List<IngredientObjectPortions> portions = null;
 
   @JsonProperty("common_name")
   private String commonName = null;
 
-  @JsonProperty("description")
-  private String description = null;
-
   @JsonProperty("footnote")
   private String footnote = null;
+
+  @JsonProperty("search_term")
+  private String searchTerm = null;
+
+  @JsonProperty("score")
+  private String score = null;
 
   public IngredientObjectItems name(String name) {
     this.name = name;
@@ -106,27 +106,34 @@ public class IngredientObjectItems   {
     this.categories = categories;
   }
 
-  public IngredientObjectItems nutrients(IngredientObjectNutrients nutrients) {
+  public IngredientObjectItems nutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public IngredientObjectItems addNutrientsItem(IngredientObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<IngredientObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
   /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
   **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public IngredientObjectNutrients getNutrients() {
+  @ApiModelProperty(value = "An array containing nutrient informatio objects for this food item")
+      @Valid
+    public List<IngredientObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(IngredientObjectNutrients nutrients) {
+  public void setNutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 
-  public IngredientObjectItems calorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public IngredientObjectItems calorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
     return this;
   }
@@ -138,11 +145,11 @@ public class IngredientObjectItems   {
   @ApiModelProperty(value = "")
   
     @Valid
-    public BrandedFoodObjectCalorieConversionFactor getCalorieConversionFactor() {
+    public IngredientObjectCalorieConversionFactor getCalorieConversionFactor() {
     return calorieConversionFactor;
   }
 
-  public void setCalorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public void setCalorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
   }
 
@@ -166,34 +173,14 @@ public class IngredientObjectItems   {
     this.proteinConversionFactor = proteinConversionFactor;
   }
 
-  public IngredientObjectItems dietLabels(BrandedFoodObjectDietLabels dietLabels) {
-    this.dietLabels = dietLabels;
-    return this;
-  }
-
-  /**
-   * Get dietLabels
-   * @return dietLabels
-  **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public BrandedFoodObjectDietLabels getDietLabels() {
-    return dietLabels;
-  }
-
-  public void setDietLabels(BrandedFoodObjectDietLabels dietLabels) {
-    this.dietLabels = dietLabels;
-  }
-
-  public IngredientObjectItems components(List<BrandedFoodObjectComponents> components) {
+  public IngredientObjectItems components(List<IngredientObjectComponents> components) {
     this.components = components;
     return this;
   }
 
-  public IngredientObjectItems addComponentsItem(BrandedFoodObjectComponents componentsItem) {
+  public IngredientObjectItems addComponentsItem(IngredientObjectComponents componentsItem) {
     if (this.components == null) {
-      this.components = new ArrayList<BrandedFoodObjectComponents>();
+      this.components = new ArrayList<IngredientObjectComponents>();
     }
     this.components.add(componentsItem);
     return this;
@@ -205,22 +192,22 @@ public class IngredientObjectItems   {
   **/
   @ApiModelProperty(value = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
       @Valid
-    public List<BrandedFoodObjectComponents> getComponents() {
+    public List<IngredientObjectComponents> getComponents() {
     return components;
   }
 
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
+  public void setComponents(List<IngredientObjectComponents> components) {
     this.components = components;
   }
 
-  public IngredientObjectItems portions(List<BrandedFoodObjectPortions> portions) {
+  public IngredientObjectItems portions(List<IngredientObjectPortions> portions) {
     this.portions = portions;
     return this;
   }
 
-  public IngredientObjectItems addPortionsItem(BrandedFoodObjectPortions portionsItem) {
+  public IngredientObjectItems addPortionsItem(IngredientObjectPortions portionsItem) {
     if (this.portions == null) {
-      this.portions = new ArrayList<BrandedFoodObjectPortions>();
+      this.portions = new ArrayList<IngredientObjectPortions>();
     }
     this.portions.add(portionsItem);
     return this;
@@ -232,11 +219,11 @@ public class IngredientObjectItems   {
   **/
   @ApiModelProperty(value = "An array of objects containing information on discrete amounts of a food found in this item")
       @Valid
-    public List<BrandedFoodObjectPortions> getPortions() {
+    public List<IngredientObjectPortions> getPortions() {
     return portions;
   }
 
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
+  public void setPortions(List<IngredientObjectPortions> portions) {
     this.portions = portions;
   }
 
@@ -246,10 +233,10 @@ public class IngredientObjectItems   {
   }
 
   /**
-   * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+   * Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
    * @return commonName
   **/
-  @ApiModelProperty(value = "Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
+  @ApiModelProperty(value = "Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
   
     public String getCommonName() {
     return commonName;
@@ -259,35 +246,16 @@ public class IngredientObjectItems   {
     this.commonName = commonName;
   }
 
-  public IngredientObjectItems description(String description) {
-    this.description = description;
-    return this;
-  }
-
-  /**
-   * A description of this item
-   * @return description
-  **/
-  @ApiModelProperty(value = "A description of this item")
-  
-    public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
   public IngredientObjectItems footnote(String footnote) {
     this.footnote = footnote;
     return this;
   }
 
   /**
-   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
    * @return footnote
   **/
-  @ApiModelProperty(value = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.")
+  @ApiModelProperty(value = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall")
   
     public String getFootnote() {
     return footnote;
@@ -295,6 +263,44 @@ public class IngredientObjectItems   {
 
   public void setFootnote(String footnote) {
     this.footnote = footnote;
+  }
+
+  public IngredientObjectItems searchTerm(String searchTerm) {
+    this.searchTerm = searchTerm;
+    return this;
+  }
+
+  /**
+   * The original search term that found this food item
+   * @return searchTerm
+  **/
+  @ApiModelProperty(value = "The original search term that found this food item")
+  
+    public String getSearchTerm() {
+    return searchTerm;
+  }
+
+  public void setSearchTerm(String searchTerm) {
+    this.searchTerm = searchTerm;
+  }
+
+  public IngredientObjectItems score(String score) {
+    this.score = score;
+    return this;
+  }
+
+  /**
+   * A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.
+   * @return score
+  **/
+  @ApiModelProperty(value = "A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.")
+  
+    public String getScore() {
+    return score;
+  }
+
+  public void setScore(String score) {
+    this.score = score;
   }
 
 
@@ -312,17 +318,17 @@ public class IngredientObjectItems   {
         Objects.equals(this.nutrients, ingredientObjectItems.nutrients) &&
         Objects.equals(this.calorieConversionFactor, ingredientObjectItems.calorieConversionFactor) &&
         Objects.equals(this.proteinConversionFactor, ingredientObjectItems.proteinConversionFactor) &&
-        Objects.equals(this.dietLabels, ingredientObjectItems.dietLabels) &&
         Objects.equals(this.components, ingredientObjectItems.components) &&
         Objects.equals(this.portions, ingredientObjectItems.portions) &&
         Objects.equals(this.commonName, ingredientObjectItems.commonName) &&
-        Objects.equals(this.description, ingredientObjectItems.description) &&
-        Objects.equals(this.footnote, ingredientObjectItems.footnote);
+        Objects.equals(this.footnote, ingredientObjectItems.footnote) &&
+        Objects.equals(this.searchTerm, ingredientObjectItems.searchTerm) &&
+        Objects.equals(this.score, ingredientObjectItems.score);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, components, portions, commonName, description, footnote);
+    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, components, portions, commonName, footnote, searchTerm, score);
   }
 
   @Override
@@ -335,12 +341,12 @@ public class IngredientObjectItems   {
     sb.append("    nutrients: ").append(toIndentedString(nutrients)).append("\n");
     sb.append("    calorieConversionFactor: ").append(toIndentedString(calorieConversionFactor)).append("\n");
     sb.append("    proteinConversionFactor: ").append(toIndentedString(proteinConversionFactor)).append("\n");
-    sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    components: ").append(toIndentedString(components)).append("\n");
     sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
+    sb.append("    searchTerm: ").append(toIndentedString(searchTerm)).append("\n");
+    sb.append("    score: ").append(toIndentedString(score)).append("\n");
     sb.append("}");
     return sb.toString();
   }

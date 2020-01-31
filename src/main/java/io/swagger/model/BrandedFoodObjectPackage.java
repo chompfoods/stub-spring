@@ -14,13 +14,13 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing basic packaging information about this item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
 public class BrandedFoodObjectPackage   {
   @JsonProperty("quantity")
   private Integer quantity = null;
 
   @JsonProperty("size")
-  private Integer size = null;
+  private String size = null;
 
   public BrandedFoodObjectPackage quantity(Integer quantity) {
     this.quantity = quantity;
@@ -41,7 +41,7 @@ public class BrandedFoodObjectPackage   {
     this.quantity = quantity;
   }
 
-  public BrandedFoodObjectPackage size(Integer size) {
+  public BrandedFoodObjectPackage size(String size) {
     this.size = size;
     return this;
   }
@@ -52,11 +52,11 @@ public class BrandedFoodObjectPackage   {
   **/
   @ApiModelProperty(value = "Package size")
   
-    public Integer getSize() {
+    public String getSize() {
     return size;
   }
 
-  public void setSize(Integer size) {
+  public void setSize(String size) {
     this.size = size;
   }
 

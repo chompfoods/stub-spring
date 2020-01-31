@@ -15,8 +15,8 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
-public class BrandedFoodObjectCalorieConversionFactor   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+public class IngredientObjectCalorieConversionFactor   {
   @JsonProperty("protein_value")
   private BigDecimal proteinValue = null;
 
@@ -26,7 +26,7 @@ public class BrandedFoodObjectCalorieConversionFactor   {
   @JsonProperty("carbohydrate_value")
   private BigDecimal carbohydrateValue = null;
 
-  public BrandedFoodObjectCalorieConversionFactor proteinValue(BigDecimal proteinValue) {
+  public IngredientObjectCalorieConversionFactor proteinValue(BigDecimal proteinValue) {
     this.proteinValue = proteinValue;
     return this;
   }
@@ -46,7 +46,7 @@ public class BrandedFoodObjectCalorieConversionFactor   {
     this.proteinValue = proteinValue;
   }
 
-  public BrandedFoodObjectCalorieConversionFactor fatValue(BigDecimal fatValue) {
+  public IngredientObjectCalorieConversionFactor fatValue(BigDecimal fatValue) {
     this.fatValue = fatValue;
     return this;
   }
@@ -66,7 +66,7 @@ public class BrandedFoodObjectCalorieConversionFactor   {
     this.fatValue = fatValue;
   }
 
-  public BrandedFoodObjectCalorieConversionFactor carbohydrateValue(BigDecimal carbohydrateValue) {
+  public IngredientObjectCalorieConversionFactor carbohydrateValue(BigDecimal carbohydrateValue) {
     this.carbohydrateValue = carbohydrateValue;
     return this;
   }
@@ -95,10 +95,10 @@ public class BrandedFoodObjectCalorieConversionFactor   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectCalorieConversionFactor brandedFoodObjectCalorieConversionFactor = (BrandedFoodObjectCalorieConversionFactor) o;
-    return Objects.equals(this.proteinValue, brandedFoodObjectCalorieConversionFactor.proteinValue) &&
-        Objects.equals(this.fatValue, brandedFoodObjectCalorieConversionFactor.fatValue) &&
-        Objects.equals(this.carbohydrateValue, brandedFoodObjectCalorieConversionFactor.carbohydrateValue);
+    IngredientObjectCalorieConversionFactor ingredientObjectCalorieConversionFactor = (IngredientObjectCalorieConversionFactor) o;
+    return Objects.equals(this.proteinValue, ingredientObjectCalorieConversionFactor.proteinValue) &&
+        Objects.equals(this.fatValue, ingredientObjectCalorieConversionFactor.fatValue) &&
+        Objects.equals(this.carbohydrateValue, ingredientObjectCalorieConversionFactor.carbohydrateValue);
   }
 
   @Override
@@ -109,7 +109,7 @@ public class BrandedFoodObjectCalorieConversionFactor   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectCalorieConversionFactor {\n");
+    sb.append("class IngredientObjectCalorieConversionFactor {\n");
     
     sb.append("    proteinValue: ").append(toIndentedString(proteinValue)).append("\n");
     sb.append("    fatValue: ").append(toIndentedString(fatValue)).append("\n");

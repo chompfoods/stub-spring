@@ -5,49 +5,240 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.BrandedFoodObjectNutrientsUsda;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * An object containing nutrient information from each source
+ * An object containing information for a specific nutrient found in this food item
  */
-@ApiModel(description = "An object containing nutrient information from each source")
+@ApiModel(description = "An object containing information for a specific nutrient found in this food item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-18T05:00:51.872Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
 public class IngredientObjectNutrients   {
-  @JsonProperty("usda")
-  @Valid
-  private List<BrandedFoodObjectNutrientsUsda> usda = null;
+  @JsonProperty("name")
+  private String name = null;
 
-  public IngredientObjectNutrients usda(List<BrandedFoodObjectNutrientsUsda> usda) {
-    this.usda = usda;
-    return this;
-  }
+  @JsonProperty("per_100g")
+  private BigDecimal per100g = null;
 
-  public IngredientObjectNutrients addUsdaItem(BrandedFoodObjectNutrientsUsda usdaItem) {
-    if (this.usda == null) {
-      this.usda = new ArrayList<BrandedFoodObjectNutrientsUsda>();
-    }
-    this.usda.add(usdaItem);
+  @JsonProperty("measurement_unit")
+  private String measurementUnit = null;
+
+  @JsonProperty("min")
+  private BigDecimal min = null;
+
+  @JsonProperty("max")
+  private BigDecimal max = null;
+
+  @JsonProperty("median")
+  private BigDecimal median = null;
+
+  @JsonProperty("rank")
+  private Integer rank = null;
+
+  @JsonProperty("data_points")
+  private Integer dataPoints = null;
+
+  @JsonProperty("footnote")
+  private String footnote = null;
+
+  @JsonProperty("description")
+  private String description = null;
+
+  public IngredientObjectNutrients name(String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * An array containing an object for each nutrient data point as found in the USDA database
-   * @return usda
+   * Nutrient name
+   * @return name
   **/
-  @ApiModelProperty(value = "An array containing an object for each nutrient data point as found in the USDA database")
-      @Valid
-    public List<BrandedFoodObjectNutrientsUsda> getUsda() {
-    return usda;
+  @ApiModelProperty(value = "Nutrient name")
+  
+    public String getName() {
+    return name;
   }
 
-  public void setUsda(List<BrandedFoodObjectNutrientsUsda> usda) {
-    this.usda = usda;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public IngredientObjectNutrients per100g(BigDecimal per100g) {
+    this.per100g = per100g;
+    return this;
+  }
+
+  /**
+   * Amount of the nutrient per 100g of food
+   * @return per100g
+  **/
+  @ApiModelProperty(value = "Amount of the nutrient per 100g of food")
+  
+    @Valid
+    public BigDecimal getPer100g() {
+    return per100g;
+  }
+
+  public void setPer100g(BigDecimal per100g) {
+    this.per100g = per100g;
+  }
+
+  public IngredientObjectNutrients measurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+    return this;
+  }
+
+  /**
+   * The unit used for the measure of this nutrient
+   * @return measurementUnit
+  **/
+  @ApiModelProperty(value = "The unit used for the measure of this nutrient")
+  
+    public String getMeasurementUnit() {
+    return measurementUnit;
+  }
+
+  public void setMeasurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+  }
+
+  public IngredientObjectNutrients min(BigDecimal min) {
+    this.min = min;
+    return this;
+  }
+
+  /**
+   * Minimum nutrient value
+   * @return min
+  **/
+  @ApiModelProperty(value = "Minimum nutrient value")
+  
+    @Valid
+    public BigDecimal getMin() {
+    return min;
+  }
+
+  public void setMin(BigDecimal min) {
+    this.min = min;
+  }
+
+  public IngredientObjectNutrients max(BigDecimal max) {
+    this.max = max;
+    return this;
+  }
+
+  /**
+   * Maximum nutrient value
+   * @return max
+  **/
+  @ApiModelProperty(value = "Maximum nutrient value")
+  
+    @Valid
+    public BigDecimal getMax() {
+    return max;
+  }
+
+  public void setMax(BigDecimal max) {
+    this.max = max;
+  }
+
+  public IngredientObjectNutrients median(BigDecimal median) {
+    this.median = median;
+    return this;
+  }
+
+  /**
+   * Median nutrient value
+   * @return median
+  **/
+  @ApiModelProperty(value = "Median nutrient value")
+  
+    @Valid
+    public BigDecimal getMedian() {
+    return median;
+  }
+
+  public void setMedian(BigDecimal median) {
+    this.median = median;
+  }
+
+  public IngredientObjectNutrients rank(Integer rank) {
+    this.rank = rank;
+    return this;
+  }
+
+  /**
+   * Nutrient rank
+   * @return rank
+  **/
+  @ApiModelProperty(value = "Nutrient rank")
+  
+    public Integer getRank() {
+    return rank;
+  }
+
+  public void setRank(Integer rank) {
+    this.rank = rank;
+  }
+
+  public IngredientObjectNutrients dataPoints(Integer dataPoints) {
+    this.dataPoints = dataPoints;
+    return this;
+  }
+
+  /**
+   * Number of observations on which the value is based
+   * @return dataPoints
+  **/
+  @ApiModelProperty(value = "Number of observations on which the value is based")
+  
+    public Integer getDataPoints() {
+    return dataPoints;
+  }
+
+  public void setDataPoints(Integer dataPoints) {
+    this.dataPoints = dataPoints;
+  }
+
+  public IngredientObjectNutrients footnote(String footnote) {
+    this.footnote = footnote;
+    return this;
+  }
+
+  /**
+   * Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.
+   * @return footnote
+  **/
+  @ApiModelProperty(value = "Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.")
+  
+    public String getFootnote() {
+    return footnote;
+  }
+
+  public void setFootnote(String footnote) {
+    this.footnote = footnote;
+  }
+
+  public IngredientObjectNutrients description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Description of the nutrient source
+   * @return description
+  **/
+  @ApiModelProperty(value = "Description of the nutrient source")
+  
+    public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -60,12 +251,21 @@ public class IngredientObjectNutrients   {
       return false;
     }
     IngredientObjectNutrients ingredientObjectNutrients = (IngredientObjectNutrients) o;
-    return Objects.equals(this.usda, ingredientObjectNutrients.usda);
+    return Objects.equals(this.name, ingredientObjectNutrients.name) &&
+        Objects.equals(this.per100g, ingredientObjectNutrients.per100g) &&
+        Objects.equals(this.measurementUnit, ingredientObjectNutrients.measurementUnit) &&
+        Objects.equals(this.min, ingredientObjectNutrients.min) &&
+        Objects.equals(this.max, ingredientObjectNutrients.max) &&
+        Objects.equals(this.median, ingredientObjectNutrients.median) &&
+        Objects.equals(this.rank, ingredientObjectNutrients.rank) &&
+        Objects.equals(this.dataPoints, ingredientObjectNutrients.dataPoints) &&
+        Objects.equals(this.footnote, ingredientObjectNutrients.footnote) &&
+        Objects.equals(this.description, ingredientObjectNutrients.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(usda);
+    return Objects.hash(name, per100g, measurementUnit, min, max, median, rank, dataPoints, footnote, description);
   }
 
   @Override
@@ -73,7 +273,16 @@ public class IngredientObjectNutrients   {
     StringBuilder sb = new StringBuilder();
     sb.append("class IngredientObjectNutrients {\n");
     
-    sb.append("    usda: ").append(toIndentedString(usda)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    per100g: ").append(toIndentedString(per100g)).append("\n");
+    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
+    sb.append("    min: ").append(toIndentedString(min)).append("\n");
+    sb.append("    max: ").append(toIndentedString(max)).append("\n");
+    sb.append("    median: ").append(toIndentedString(median)).append("\n");
+    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
+    sb.append("    dataPoints: ").append(toIndentedString(dataPoints)).append("\n");
+    sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();
   }
