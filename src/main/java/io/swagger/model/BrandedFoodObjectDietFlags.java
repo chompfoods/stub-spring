@@ -3,8 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -12,9 +11,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing information on an individual ingredient that was flagged as potentially not being compatible with a certain diet
  */
-@ApiModel(description = "An object containing information on an individual ingredient that was flagged as potentially not being compatible with a certain diet")
+@Schema(description = "An object containing information on an individual ingredient that was flagged as potentially not being compatible with a certain diet")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class BrandedFoodObjectDietFlags   {
   @JsonProperty("ingredient")
   private String ingredient = null;
@@ -45,8 +46,8 @@ public class BrandedFoodObjectDietFlags   {
   /**
    * Ingredient name
    * @return ingredient
-  **/
-  @ApiModelProperty(value = "Ingredient name")
+   **/
+  @Schema(description = "Ingredient name")
   
     public String getIngredient() {
     return ingredient;
@@ -64,8 +65,8 @@ public class BrandedFoodObjectDietFlags   {
   /**
    * Description of the ingredient
    * @return ingredientDescription
-  **/
-  @ApiModelProperty(value = "Description of the ingredient")
+   **/
+  @Schema(description = "Description of the ingredient")
   
     public String getIngredientDescription() {
     return ingredientDescription;
@@ -83,8 +84,8 @@ public class BrandedFoodObjectDietFlags   {
   /**
    * Name of the diet with which this ingredient may not be compatible
    * @return dietLabel
-  **/
-  @ApiModelProperty(value = "Name of the diet with which this ingredient may not be compatible")
+   **/
+  @Schema(description = "Name of the diet with which this ingredient may not be compatible")
   
     public String getDietLabel() {
     return dietLabel;
@@ -102,8 +103,8 @@ public class BrandedFoodObjectDietFlags   {
   /**
    * A description of if we believe this ingredient is compatible with the diet
    * @return isCompatible
-  **/
-  @ApiModelProperty(value = "A description of if we believe this ingredient is compatible with the diet")
+   **/
+  @Schema(description = "A description of if we believe this ingredient is compatible with the diet")
   
     public String getIsCompatible() {
     return isCompatible;
@@ -121,8 +122,8 @@ public class BrandedFoodObjectDietFlags   {
   /**
    * A numeric representation of if we believe this ingredient is compatible with the diet. Higher values indicate more compatibility
    * @return compatibilityLevel
-  **/
-  @ApiModelProperty(value = "A numeric representation of if we believe this ingredient is compatible with the diet. Higher values indicate more compatibility")
+   **/
+  @Schema(description = "A numeric representation of if we believe this ingredient is compatible with the diet. Higher values indicate more compatibility")
   
     public Integer getCompatibilityLevel() {
     return compatibilityLevel;
@@ -140,8 +141,8 @@ public class BrandedFoodObjectDietFlags   {
   /**
    * A description of how we graded this ingredient for compatibility with the diet
    * @return compatibilityDescription
-  **/
-  @ApiModelProperty(value = "A description of how we graded this ingredient for compatibility with the diet")
+   **/
+  @Schema(description = "A description of how we graded this ingredient for compatibility with the diet")
   
     public String getCompatibilityDescription() {
     return compatibilityDescription;
@@ -159,8 +160,8 @@ public class BrandedFoodObjectDietFlags   {
   /**
    * Boolean representing if the ingredient is a known allergen
    * @return isAllergen
-  **/
-  @ApiModelProperty(value = "Boolean representing if the ingredient is a known allergen")
+   **/
+  @Schema(description = "Boolean representing if the ingredient is a known allergen")
   
     public Boolean isIsAllergen() {
     return isAllergen;

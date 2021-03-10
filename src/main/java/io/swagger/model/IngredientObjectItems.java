@@ -3,12 +3,11 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.IngredientObjectCalorieConversionFactor;
 import io.swagger.model.IngredientObjectComponents;
 import io.swagger.model.IngredientObjectNutrients;
 import io.swagger.model.IngredientObjectPortions;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +18,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing information for this specific item.
  */
-@ApiModel(description = "An object containing information for this specific item.")
+@Schema(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class IngredientObjectItems   {
   @JsonProperty("name")
   private String name = null;
@@ -68,8 +69,8 @@ public class IngredientObjectItems   {
   /**
    * Item name as provided by brand owner or as shown on packaging
    * @return name
-  **/
-  @ApiModelProperty(value = "Item name as provided by brand owner or as shown on packaging")
+   **/
+  @Schema(description = "Item name as provided by brand owner or as shown on packaging")
   
     public String getName() {
     return name;
@@ -95,8 +96,8 @@ public class IngredientObjectItems   {
   /**
    * Get categories
    * @return categories
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     public List<String> getCategories() {
     return categories;
@@ -122,8 +123,8 @@ public class IngredientObjectItems   {
   /**
    * An array containing nutrient informatio objects for this food item
    * @return nutrients
-  **/
-  @ApiModelProperty(value = "An array containing nutrient informatio objects for this food item")
+   **/
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
       @Valid
     public List<IngredientObjectNutrients> getNutrients() {
     return nutrients;
@@ -141,8 +142,8 @@ public class IngredientObjectItems   {
   /**
    * Get calorieConversionFactor
    * @return calorieConversionFactor
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public IngredientObjectCalorieConversionFactor getCalorieConversionFactor() {
@@ -161,8 +162,8 @@ public class IngredientObjectItems   {
   /**
    * The multiplication factor used to calculate protein from nitrogen
    * @return proteinConversionFactor
-  **/
-  @ApiModelProperty(value = "The multiplication factor used to calculate protein from nitrogen")
+   **/
+  @Schema(description = "The multiplication factor used to calculate protein from nitrogen")
   
     @Valid
     public BigDecimal getProteinConversionFactor() {
@@ -189,8 +190,8 @@ public class IngredientObjectItems   {
   /**
    * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
    * @return components
-  **/
-  @ApiModelProperty(value = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
+   **/
+  @Schema(description = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
       @Valid
     public List<IngredientObjectComponents> getComponents() {
     return components;
@@ -216,8 +217,8 @@ public class IngredientObjectItems   {
   /**
    * An array of objects containing information on discrete amounts of a food found in this item
    * @return portions
-  **/
-  @ApiModelProperty(value = "An array of objects containing information on discrete amounts of a food found in this item")
+   **/
+  @Schema(description = "An array of objects containing information on discrete amounts of a food found in this item")
       @Valid
     public List<IngredientObjectPortions> getPortions() {
     return portions;
@@ -235,8 +236,8 @@ public class IngredientObjectItems   {
   /**
    * Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
    * @return commonName
-  **/
-  @ApiModelProperty(value = "Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
+   **/
+  @Schema(description = "Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
   
     public String getCommonName() {
     return commonName;
@@ -254,8 +255,8 @@ public class IngredientObjectItems   {
   /**
    * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
    * @return footnote
-  **/
-  @ApiModelProperty(value = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall")
+   **/
+  @Schema(description = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall")
   
     public String getFootnote() {
     return footnote;
@@ -273,8 +274,8 @@ public class IngredientObjectItems   {
   /**
    * The original search term that found this food item
    * @return searchTerm
-  **/
-  @ApiModelProperty(value = "The original search term that found this food item")
+   **/
+  @Schema(description = "The original search term that found this food item")
   
     public String getSearchTerm() {
     return searchTerm;
@@ -292,8 +293,8 @@ public class IngredientObjectItems   {
   /**
    * A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.
    * @return score
-  **/
-  @ApiModelProperty(value = "A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.")
+   **/
+  @Schema(description = "A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.")
   
     public String getScore() {
     return score;

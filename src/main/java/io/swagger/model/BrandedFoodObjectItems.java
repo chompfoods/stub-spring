@@ -3,8 +3,6 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.BrandedFoodObjectCountryDetails;
 import io.swagger.model.BrandedFoodObjectDietFlags;
 import io.swagger.model.BrandedFoodObjectDietLabels;
@@ -12,6 +10,7 @@ import io.swagger.model.BrandedFoodObjectNutrients;
 import io.swagger.model.BrandedFoodObjectPackage;
 import io.swagger.model.BrandedFoodObjectPackagingPhotos;
 import io.swagger.model.BrandedFoodObjectServing;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -21,9 +20,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing information for this specific item.
  */
-@ApiModel(description = "An object containing information for this specific item.")
+@Schema(description = "An object containing information for this specific item.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class BrandedFoodObjectItems   {
   @JsonProperty("barcode")
   private String barcode = null;
@@ -114,8 +115,8 @@ public class BrandedFoodObjectItems   {
   /**
    * EAN/UPC barcode
    * @return barcode
-  **/
-  @ApiModelProperty(value = "EAN/UPC barcode")
+   **/
+  @Schema(description = "EAN/UPC barcode")
   
     public String getBarcode() {
     return barcode;
@@ -133,8 +134,8 @@ public class BrandedFoodObjectItems   {
   /**
    * Item name as provided by brand owner or as shown on packaging
    * @return name
-  **/
-  @ApiModelProperty(value = "Item name as provided by brand owner or as shown on packaging")
+   **/
+  @Schema(description = "Item name as provided by brand owner or as shown on packaging")
   
     public String getName() {
     return name;
@@ -152,8 +153,8 @@ public class BrandedFoodObjectItems   {
   /**
    * The brand name that owns this item
    * @return brand
-  **/
-  @ApiModelProperty(value = "The brand name that owns this item")
+   **/
+  @Schema(description = "The brand name that owns this item")
   
     public String getBrand() {
     return brand;
@@ -171,8 +172,8 @@ public class BrandedFoodObjectItems   {
   /**
    * This food item's ingredients from greatest quantity to least
    * @return ingredients
-  **/
-  @ApiModelProperty(value = "This food item's ingredients from greatest quantity to least")
+   **/
+  @Schema(description = "This food item's ingredients from greatest quantity to least")
   
     public String getIngredients() {
     return ingredients;
@@ -190,8 +191,8 @@ public class BrandedFoodObjectItems   {
   /**
    * Get _package
    * @return _package
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectPackage getPackage() {
@@ -210,8 +211,8 @@ public class BrandedFoodObjectItems   {
   /**
    * Get serving
    * @return serving
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectServing getServing() {
@@ -238,8 +239,8 @@ public class BrandedFoodObjectItems   {
   /**
    * Get categories
    * @return categories
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     public List<String> getCategories() {
     return categories;
@@ -265,8 +266,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array containing nutrient informatio objects for this food item
    * @return nutrients
-  **/
-  @ApiModelProperty(value = "An array containing nutrient informatio objects for this food item")
+   **/
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
       @Valid
     public List<BrandedFoodObjectNutrients> getNutrients() {
     return nutrients;
@@ -284,8 +285,8 @@ public class BrandedFoodObjectItems   {
   /**
    * Get dietLabels
    * @return dietLabels
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectDietLabels getDietLabels() {
@@ -312,8 +313,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of ingredient objects that were flagged while grading this item for compatibility with each diet
    * @return dietFlags
-  **/
-  @ApiModelProperty(value = "An array of ingredient objects that were flagged while grading this item for compatibility with each diet")
+   **/
+  @Schema(description = "An array of ingredient objects that were flagged while grading this item for compatibility with each diet")
       @Valid
     public List<BrandedFoodObjectDietFlags> getDietFlags() {
     return dietFlags;
@@ -331,8 +332,8 @@ public class BrandedFoodObjectItems   {
   /**
    * Get packagingPhotos
    * @return packagingPhotos
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectPackagingPhotos getPackagingPhotos() {
@@ -359,8 +360,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of ingredients in this item that may cause allergic reactions in people
    * @return allergens
-  **/
-  @ApiModelProperty(value = "An array of ingredients in this item that may cause allergic reactions in people")
+   **/
+  @Schema(description = "An array of ingredients in this item that may cause allergic reactions in people")
   
     public List<String> getAllergens() {
     return allergens;
@@ -386,8 +387,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of brands we have associated with this item. Some items are sold by more than 1 brand.
    * @return brandList
-  **/
-  @ApiModelProperty(value = "An array of brands we have associated with this item. Some items are sold by more than 1 brand.")
+   **/
+  @Schema(description = "An array of brands we have associated with this item. Some items are sold by more than 1 brand.")
   
     public List<String> getBrandList() {
     return brandList;
@@ -413,8 +414,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of countries where this item is sold
    * @return countries
-  **/
-  @ApiModelProperty(value = "An array of countries where this item is sold")
+   **/
+  @Schema(description = "An array of countries where this item is sold")
   
     public List<String> getCountries() {
     return countries;
@@ -432,8 +433,8 @@ public class BrandedFoodObjectItems   {
   /**
    * Get countryDetails
    * @return countryDetails
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectCountryDetails getCountryDetails() {
@@ -460,8 +461,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of ingredients made from palm oil
    * @return palmOilIngredients
-  **/
-  @ApiModelProperty(value = "An array of ingredients made from palm oil")
+   **/
+  @Schema(description = "An array of ingredients made from palm oil")
   
     public List<String> getPalmOilIngredients() {
     return palmOilIngredients;
@@ -487,8 +488,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of this item's ingredients
    * @return ingredientList
-  **/
-  @ApiModelProperty(value = "An array of this item's ingredients")
+   **/
+  @Schema(description = "An array of this item's ingredients")
   
     public List<String> getIngredientList() {
     return ingredientList;
@@ -506,8 +507,8 @@ public class BrandedFoodObjectItems   {
   /**
    * A boolean indicating if we have English ingredients for this item
    * @return hasEnglishIngredients
-  **/
-  @ApiModelProperty(value = "A boolean indicating if we have English ingredients for this item")
+   **/
+  @Schema(description = "A boolean indicating if we have English ingredients for this item")
   
     public Boolean isHasEnglishIngredients() {
     return hasEnglishIngredients;
@@ -533,8 +534,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of minerals that this item contains
    * @return minerals
-  **/
-  @ApiModelProperty(value = "An array of minerals that this item contains")
+   **/
+  @Schema(description = "An array of minerals that this item contains")
   
     public List<String> getMinerals() {
     return minerals;
@@ -560,8 +561,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of trace ingredients that may be found in this item
    * @return traces
-  **/
-  @ApiModelProperty(value = "An array of trace ingredients that may be found in this item")
+   **/
+  @Schema(description = "An array of trace ingredients that may be found in this item")
   
     public List<String> getTraces() {
     return traces;
@@ -587,8 +588,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of vitamins that are found in this item
    * @return vitamins
-  **/
-  @ApiModelProperty(value = "An array of vitamins that are found in this item")
+   **/
+  @Schema(description = "An array of vitamins that are found in this item")
   
     public List<String> getVitamins() {
     return vitamins;
@@ -606,8 +607,8 @@ public class BrandedFoodObjectItems   {
   /**
    * A description of this item
    * @return description
-  **/
-  @ApiModelProperty(value = "A description of this item")
+   **/
+  @Schema(description = "A description of this item")
   
     public String getDescription() {
     return description;
@@ -633,8 +634,8 @@ public class BrandedFoodObjectItems   {
   /**
    * An array of keywords that can be used to describe this item
    * @return keywords
-  **/
-  @ApiModelProperty(value = "An array of keywords that can be used to describe this item")
+   **/
+  @Schema(description = "An array of keywords that can be used to describe this item")
   
     public List<String> getKeywords() {
     return keywords;

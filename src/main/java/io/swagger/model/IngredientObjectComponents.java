@@ -3,8 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
@@ -13,9 +12,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing information on a specific component of this food item
  */
-@ApiModel(description = "An object containing information on a specific component of this food item")
+@Schema(description = "An object containing information on a specific component of this food item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class IngredientObjectComponents   {
   @JsonProperty("name")
   private String name = null;
@@ -40,8 +41,8 @@ public class IngredientObjectComponents   {
   /**
    * The kind of component, e.g. bone
    * @return name
-  **/
-  @ApiModelProperty(value = "The kind of component, e.g. bone")
+   **/
+  @Schema(description = "The kind of component, e.g. bone")
   
     public String getName() {
     return name;
@@ -59,8 +60,8 @@ public class IngredientObjectComponents   {
   /**
    * The weight of the component as a percentage of the total weight of the food
    * @return pctWeight
-  **/
-  @ApiModelProperty(value = "The weight of the component as a percentage of the total weight of the food")
+   **/
+  @Schema(description = "The weight of the component as a percentage of the total weight of the food")
   
     @Valid
     public BigDecimal getPctWeight() {
@@ -79,8 +80,8 @@ public class IngredientObjectComponents   {
   /**
    * The weight of the component in grams
    * @return gramWeight
-  **/
-  @ApiModelProperty(value = "The weight of the component in grams")
+   **/
+  @Schema(description = "The weight of the component in grams")
   
     @Valid
     public BigDecimal getGramWeight() {
@@ -99,8 +100,8 @@ public class IngredientObjectComponents   {
   /**
    * Whether the component is refuse, i.e. not edible
    * @return isRefuse
-  **/
-  @ApiModelProperty(value = "Whether the component is refuse, i.e. not edible")
+   **/
+  @Schema(description = "Whether the component is refuse, i.e. not edible")
   
     public Boolean isIsRefuse() {
     return isRefuse;
@@ -118,8 +119,8 @@ public class IngredientObjectComponents   {
   /**
    * The number of obersvations on which the measure is based
    * @return dataPoints
-  **/
-  @ApiModelProperty(value = "The number of obersvations on which the measure is based")
+   **/
+  @Schema(description = "The number of obersvations on which the measure is based")
   
     public Integer getDataPoints() {
     return dataPoints;

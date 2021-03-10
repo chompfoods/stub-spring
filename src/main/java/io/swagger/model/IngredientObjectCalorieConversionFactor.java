@@ -3,8 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
@@ -13,9 +12,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  */
-@ApiModel(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
+@Schema(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class IngredientObjectCalorieConversionFactor   {
   @JsonProperty("protein_value")
   private BigDecimal proteinValue = null;
@@ -34,8 +35,8 @@ public class IngredientObjectCalorieConversionFactor   {
   /**
    * The multiplication factor for protein
    * @return proteinValue
-  **/
-  @ApiModelProperty(value = "The multiplication factor for protein")
+   **/
+  @Schema(description = "The multiplication factor for protein")
   
     @Valid
     public BigDecimal getProteinValue() {
@@ -54,8 +55,8 @@ public class IngredientObjectCalorieConversionFactor   {
   /**
    * The multiplication factor for fat
    * @return fatValue
-  **/
-  @ApiModelProperty(value = "The multiplication factor for fat")
+   **/
+  @Schema(description = "The multiplication factor for fat")
   
     @Valid
     public BigDecimal getFatValue() {
@@ -74,8 +75,8 @@ public class IngredientObjectCalorieConversionFactor   {
   /**
    * The multiplication factor for carbohydrates
    * @return carbohydrateValue
-  **/
-  @ApiModelProperty(value = "The multiplication factor for carbohydrates")
+   **/
+  @Schema(description = "The multiplication factor for carbohydrates")
   
     @Valid
     public BigDecimal getCarbohydrateValue() {

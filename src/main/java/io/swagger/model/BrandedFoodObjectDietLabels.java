@@ -3,11 +3,10 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.BrandedFoodObjectDietLabelsGlutenFree;
 import io.swagger.model.BrandedFoodObjectDietLabelsVegan;
 import io.swagger.model.BrandedFoodObjectDietLabelsVegetarian;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -15,9 +14,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing this item&#x27;s compatibility grades for each supported diet
  */
-@ApiModel(description = "An object containing this item's compatibility grades for each supported diet")
+@Schema(description = "An object containing this item's compatibility grades for each supported diet")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class BrandedFoodObjectDietLabels   {
   @JsonProperty("vegan")
   private BrandedFoodObjectDietLabelsVegan vegan = null;
@@ -36,8 +37,8 @@ public class BrandedFoodObjectDietLabels   {
   /**
    * Get vegan
    * @return vegan
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectDietLabelsVegan getVegan() {
@@ -56,8 +57,8 @@ public class BrandedFoodObjectDietLabels   {
   /**
    * Get vegetarian
    * @return vegetarian
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectDietLabelsVegetarian getVegetarian() {
@@ -76,8 +77,8 @@ public class BrandedFoodObjectDietLabels   {
   /**
    * Get glutenFree
    * @return glutenFree
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectDietLabelsGlutenFree getGlutenFree() {

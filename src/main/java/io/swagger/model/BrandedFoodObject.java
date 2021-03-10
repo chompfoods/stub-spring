@@ -3,9 +3,8 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.BrandedFoodObjectItems;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -15,9 +14,11 @@ import javax.validation.constraints.*;
 /**
  * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
  */
-@ApiModel(description = "Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.")
+@Schema(description = "Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class BrandedFoodObject   {
   @JsonProperty("items")
   @Valid
@@ -39,8 +40,8 @@ public class BrandedFoodObject   {
   /**
    * An array containing an object for each individual item returned by your API call.
    * @return items
-  **/
-  @ApiModelProperty(value = "An array containing an object for each individual item returned by your API call.")
+   **/
+  @Schema(description = "An array containing an object for each individual item returned by your API call.")
       @Valid
     public List<BrandedFoodObjectItems> getItems() {
     return items;

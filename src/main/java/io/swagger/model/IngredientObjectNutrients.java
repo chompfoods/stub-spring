@@ -3,8 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
@@ -13,9 +12,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing information for a specific nutrient found in this food item
  */
-@ApiModel(description = "An object containing information for a specific nutrient found in this food item")
+@Schema(description = "An object containing information for a specific nutrient found in this food item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class IngredientObjectNutrients   {
   @JsonProperty("name")
   private String name = null;
@@ -55,8 +56,8 @@ public class IngredientObjectNutrients   {
   /**
    * Nutrient name
    * @return name
-  **/
-  @ApiModelProperty(value = "Nutrient name")
+   **/
+  @Schema(description = "Nutrient name")
   
     public String getName() {
     return name;
@@ -74,8 +75,8 @@ public class IngredientObjectNutrients   {
   /**
    * Amount of the nutrient per 100g of food
    * @return per100g
-  **/
-  @ApiModelProperty(value = "Amount of the nutrient per 100g of food")
+   **/
+  @Schema(description = "Amount of the nutrient per 100g of food")
   
     @Valid
     public BigDecimal getPer100g() {
@@ -94,8 +95,8 @@ public class IngredientObjectNutrients   {
   /**
    * The unit used for the measure of this nutrient
    * @return measurementUnit
-  **/
-  @ApiModelProperty(value = "The unit used for the measure of this nutrient")
+   **/
+  @Schema(description = "The unit used for the measure of this nutrient")
   
     public String getMeasurementUnit() {
     return measurementUnit;
@@ -113,8 +114,8 @@ public class IngredientObjectNutrients   {
   /**
    * Minimum nutrient value
    * @return min
-  **/
-  @ApiModelProperty(value = "Minimum nutrient value")
+   **/
+  @Schema(description = "Minimum nutrient value")
   
     @Valid
     public BigDecimal getMin() {
@@ -133,8 +134,8 @@ public class IngredientObjectNutrients   {
   /**
    * Maximum nutrient value
    * @return max
-  **/
-  @ApiModelProperty(value = "Maximum nutrient value")
+   **/
+  @Schema(description = "Maximum nutrient value")
   
     @Valid
     public BigDecimal getMax() {
@@ -153,8 +154,8 @@ public class IngredientObjectNutrients   {
   /**
    * Median nutrient value
    * @return median
-  **/
-  @ApiModelProperty(value = "Median nutrient value")
+   **/
+  @Schema(description = "Median nutrient value")
   
     @Valid
     public BigDecimal getMedian() {
@@ -173,8 +174,8 @@ public class IngredientObjectNutrients   {
   /**
    * Nutrient rank
    * @return rank
-  **/
-  @ApiModelProperty(value = "Nutrient rank")
+   **/
+  @Schema(description = "Nutrient rank")
   
     public Integer getRank() {
     return rank;
@@ -192,8 +193,8 @@ public class IngredientObjectNutrients   {
   /**
    * Number of observations on which the value is based
    * @return dataPoints
-  **/
-  @ApiModelProperty(value = "Number of observations on which the value is based")
+   **/
+  @Schema(description = "Number of observations on which the value is based")
   
     public Integer getDataPoints() {
     return dataPoints;
@@ -211,8 +212,8 @@ public class IngredientObjectNutrients   {
   /**
    * Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.
    * @return footnote
-  **/
-  @ApiModelProperty(value = "Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.")
+   **/
+  @Schema(description = "Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.")
   
     public String getFootnote() {
     return footnote;
@@ -230,8 +231,8 @@ public class IngredientObjectNutrients   {
   /**
    * Description of the nutrient source
    * @return description
-  **/
-  @ApiModelProperty(value = "Description of the nutrient source")
+   **/
+  @Schema(description = "Description of the nutrient source")
   
     public String getDescription() {
     return description;

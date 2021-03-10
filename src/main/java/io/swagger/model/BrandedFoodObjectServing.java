@@ -3,8 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -12,9 +11,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing serving information for this item
  */
-@ApiModel(description = "An object containing serving information for this item")
+@Schema(description = "An object containing serving information for this item")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class BrandedFoodObjectServing   {
   @JsonProperty("size")
   private String size = null;
@@ -33,8 +34,8 @@ public class BrandedFoodObjectServing   {
   /**
    * Serving size
    * @return size
-  **/
-  @ApiModelProperty(value = "Serving size")
+   **/
+  @Schema(description = "Serving size")
   
     public String getSize() {
     return size;
@@ -52,8 +53,8 @@ public class BrandedFoodObjectServing   {
   /**
    * Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
    * @return measurementUnit
-  **/
-  @ApiModelProperty(value = "Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)")
+   **/
+  @Schema(description = "Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)")
   
     public String getMeasurementUnit() {
     return measurementUnit;
@@ -71,8 +72,8 @@ public class BrandedFoodObjectServing   {
   /**
    * Serving size description
    * @return sizeFulltext
-  **/
-  @ApiModelProperty(value = "Serving size description")
+   **/
+  @Schema(description = "Serving size description")
   
     public String getSizeFulltext() {
     return sizeFulltext;

@@ -3,7 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.IngredientObjectItems;
+import io.swagger.model.RecipeObjectItems;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,19 +19,19 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
 
 
-public class IngredientObject   {
+public class RecipeObject   {
   @JsonProperty("items")
   @Valid
-  private List<IngredientObjectItems> items = null;
+  private List<RecipeObjectItems> items = null;
 
-  public IngredientObject items(List<IngredientObjectItems> items) {
+  public RecipeObject items(List<RecipeObjectItems> items) {
     this.items = items;
     return this;
   }
 
-  public IngredientObject addItemsItem(IngredientObjectItems itemsItem) {
+  public RecipeObject addItemsItem(RecipeObjectItems itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<IngredientObjectItems>();
+      this.items = new ArrayList<RecipeObjectItems>();
     }
     this.items.add(itemsItem);
     return this;
@@ -43,11 +43,11 @@ public class IngredientObject   {
    **/
   @Schema(description = "An array containing an object for each individual item returned by your API call.")
       @Valid
-    public List<IngredientObjectItems> getItems() {
+    public List<RecipeObjectItems> getItems() {
     return items;
   }
 
-  public void setItems(List<IngredientObjectItems> items) {
+  public void setItems(List<RecipeObjectItems> items) {
     this.items = items;
   }
 
@@ -60,8 +60,8 @@ public class IngredientObject   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    IngredientObject ingredientObject = (IngredientObject) o;
-    return Objects.equals(this.items, ingredientObject.items);
+    RecipeObject recipeObject = (RecipeObject) o;
+    return Objects.equals(this.items, recipeObject.items);
   }
 
   @Override
@@ -72,7 +72,7 @@ public class IngredientObject   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class IngredientObject {\n");
+    sb.append("class RecipeObject {\n");
     
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");

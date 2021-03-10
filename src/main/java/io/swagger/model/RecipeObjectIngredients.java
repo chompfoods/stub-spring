@@ -9,56 +9,56 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * An object containing basic packaging information about this item
+ * An object containing information about a specific recipe ingredient
  */
-@Schema(description = "An object containing basic packaging information about this item")
+@Schema(description = "An object containing information about a specific recipe ingredient")
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
 
 
-public class BrandedFoodObjectPackage   {
+public class RecipeObjectIngredients   {
   @JsonProperty("quantity")
-  private Integer quantity = null;
+  private String quantity = null;
 
-  @JsonProperty("size")
-  private String size = null;
+  @JsonProperty("description")
+  private String description = null;
 
-  public BrandedFoodObjectPackage quantity(Integer quantity) {
+  public RecipeObjectIngredients quantity(String quantity) {
     this.quantity = quantity;
     return this;
   }
 
   /**
-   * Package quantity
+   * The quantity of this ingredient
    * @return quantity
    **/
-  @Schema(description = "Package quantity")
+  @Schema(description = "The quantity of this ingredient")
   
-    public Integer getQuantity() {
+    public String getQuantity() {
     return quantity;
   }
 
-  public void setQuantity(Integer quantity) {
+  public void setQuantity(String quantity) {
     this.quantity = quantity;
   }
 
-  public BrandedFoodObjectPackage size(String size) {
-    this.size = size;
+  public RecipeObjectIngredients description(String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * Package size
-   * @return size
+   * A description of this ingredient
+   * @return description
    **/
-  @Schema(description = "Package size")
+  @Schema(description = "A description of this ingredient")
   
-    public String getSize() {
-    return size;
+    public String getDescription() {
+    return description;
   }
 
-  public void setSize(String size) {
-    this.size = size;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -70,23 +70,23 @@ public class BrandedFoodObjectPackage   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackage brandedFoodObjectPackage = (BrandedFoodObjectPackage) o;
-    return Objects.equals(this.quantity, brandedFoodObjectPackage.quantity) &&
-        Objects.equals(this.size, brandedFoodObjectPackage.size);
+    RecipeObjectIngredients recipeObjectIngredients = (RecipeObjectIngredients) o;
+    return Objects.equals(this.quantity, recipeObjectIngredients.quantity) &&
+        Objects.equals(this.description, recipeObjectIngredients.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quantity, size);
+    return Objects.hash(quantity, description);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackage {\n");
+    sb.append("class RecipeObjectIngredients {\n");
     
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();
   }

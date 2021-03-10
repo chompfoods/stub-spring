@@ -3,8 +3,7 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -12,9 +11,11 @@ import javax.validation.constraints.*;
 /**
  * An object containing information on this item&#x27;s compatibility with the Vegan diets
  */
-@ApiModel(description = "An object containing information on this item's compatibility with the Vegan diets")
+@Schema(description = "An object containing information on this item's compatibility with the Vegan diets")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class BrandedFoodObjectDietLabelsVegan   {
   @JsonProperty("name")
   private String name = null;
@@ -39,8 +40,8 @@ public class BrandedFoodObjectDietLabelsVegan   {
   /**
    * Diet name
    * @return name
-  **/
-  @ApiModelProperty(value = "Diet name")
+   **/
+  @Schema(description = "Diet name")
   
     public String getName() {
     return name;
@@ -58,8 +59,8 @@ public class BrandedFoodObjectDietLabelsVegan   {
   /**
    * Boolean describing if this item is compatible with this diet
    * @return isCompatible
-  **/
-  @ApiModelProperty(value = "Boolean describing if this item is compatible with this diet")
+   **/
+  @Schema(description = "Boolean describing if this item is compatible with this diet")
   
     public Boolean isIsCompatible() {
     return isCompatible;
@@ -77,8 +78,8 @@ public class BrandedFoodObjectDietLabelsVegan   {
   /**
    * Numeric representation of how compatible this item is with this diet. Higher values indicate more compatibility
    * @return compatibilityLevel
-  **/
-  @ApiModelProperty(value = "Numeric representation of how compatible this item is with this diet. Higher values indicate more compatibility")
+   **/
+  @Schema(description = "Numeric representation of how compatible this item is with this diet. Higher values indicate more compatibility")
   
     public Integer getCompatibilityLevel() {
     return compatibilityLevel;
@@ -96,8 +97,8 @@ public class BrandedFoodObjectDietLabelsVegan   {
   /**
    * Boolean that indicates if we are confident in how this item is graded for this diet
    * @return confidence
-  **/
-  @ApiModelProperty(value = "Boolean that indicates if we are confident in how this item is graded for this diet")
+   **/
+  @Schema(description = "Boolean that indicates if we are confident in how this item is graded for this diet")
   
     public Integer getConfidence() {
     return confidence;
@@ -115,8 +116,8 @@ public class BrandedFoodObjectDietLabelsVegan   {
   /**
    * Description of our confidence that this item was graded correctly
    * @return confidenceDescription
-  **/
-  @ApiModelProperty(value = "Description of our confidence that this item was graded correctly")
+   **/
+  @Schema(description = "Description of our confidence that this item was graded correctly")
   
     public String getConfidenceDescription() {
     return confidenceDescription;

@@ -3,11 +3,10 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.BrandedFoodObjectPackagingPhotosFront;
 import io.swagger.model.BrandedFoodObjectPackagingPhotosIngredients;
 import io.swagger.model.BrandedFoodObjectPackagingPhotosNutrition;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -15,9 +14,11 @@ import javax.validation.constraints.*;
 /**
  * A object containing a collection of photos of this item&#x27;s packaging
  */
-@ApiModel(description = "A object containing a collection of photos of this item's packaging")
+@Schema(description = "A object containing a collection of photos of this item's packaging")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-30T02:08:15.864Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-09T22:27:46.582Z[GMT]")
+
+
 public class BrandedFoodObjectPackagingPhotos   {
   @JsonProperty("front")
   private BrandedFoodObjectPackagingPhotosFront front = null;
@@ -36,8 +37,8 @@ public class BrandedFoodObjectPackagingPhotos   {
   /**
    * Get front
    * @return front
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectPackagingPhotosFront getFront() {
@@ -56,8 +57,8 @@ public class BrandedFoodObjectPackagingPhotos   {
   /**
    * Get nutrition
    * @return nutrition
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectPackagingPhotosNutrition getNutrition() {
@@ -76,8 +77,8 @@ public class BrandedFoodObjectPackagingPhotos   {
   /**
    * Get ingredients
    * @return ingredients
-  **/
-  @ApiModelProperty(value = "")
+   **/
+  @Schema(description = "")
   
     @Valid
     public BrandedFoodObjectPackagingPhotosIngredients getIngredients() {
